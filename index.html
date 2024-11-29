@@ -85,15 +85,19 @@
     <div class="container">
       <h2>Contact Us</h2>
       <p>Reach out to us for professional accounting services:</p>
-      <p><i class="fas fa-phone"></i> Phone: +254 727 542 595</p>
+      <p><i class="fas fa-phone"></i> Phone: +254 720 000 000</p>
       <p><i class="fas fa-envelope"></i> Email: joyce.mainaN@gmail.com</p>
-      <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <input type="text" placeholder="Phone Number" required>
-        <textarea placeholder="Your Message" required></textarea>
+      <form id="contact-form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdobhBfTCqsLAUp0RNXLmf3eX9jLHsxgoPakn9qek2GI6izYA/formResponse" method="POST" target="hidden_iframe">
+        <input type="text" name="entry.2045553459" placeholder="Your Name" id="name" required>
+        <input type="email" name="entry.2001873758" placeholder="Your Email" id="email" required>
+        <input type="text" name="entry.172257648" placeholder="Your Phone Number" id="phone" required>
+        <textarea name="entry.592809683" placeholder="Your Message" id="message" required></textarea>
         <button type="submit">Send Message</button>
+        <!-- Custom feedback message -->
+        <!-- <p id="thank-you" style="display: none; color: green;">Thanks for your message! We'll get back to you soon.</p> -->
+        <p id="form-feedback" style="display: none;"></p> <!-- For error/success feedback -->
       </form>
+      <iframe name="hidden_iframe" style="display: none;"></iframe> <!-- Invisible iframe for submission -->
     </div>
   </section>
 
@@ -103,5 +107,6 @@
       <p>© 2024 Joyce Maina - Certified Public Accountant | Nairobi, Kenya</p>
     </div>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
