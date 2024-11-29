@@ -141,3 +141,9 @@ nav ul li a {
   border-radius: 5px;
   cursor: pointer;
 }
+
+/* CSS for invalid input field */
+.invalid {
+  border: 2px solid red !important; /* Red border to indicate invalid input */
+  /*background-color: #fdd; /* Optional: light red background */
+}
