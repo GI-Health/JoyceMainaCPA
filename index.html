@@ -86,27 +86,29 @@
   <div class="container">
     <h2>Contact Us</h2>
     <p>Reach out to us for professional accounting services:</p>
-    <p><i class="fas fa-phone"></i> Phone: +254 720 000 000</p>
-    <p><i class="fas fa-envelope"></i> Email: <a href="mailto:joyce.mainaN@gmail.com">joyce.mainaN@gmail.com</a></p>
-	      <!-- QR Code -->
-      <div class="qr-code">
-        <img src="QR.png" alt="Scan to get contact details" />
+    <div class="contact-info">
+      <div class="contact-text">
+        <p><i class="fas fa-phone"></i> Phone: +254 720 000 000</p>
+        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:joyce.mainaN@gmail.com">MainaJoyceNjoki@gmail.com</a></p>
       </div>
-
-
-      <form id="contact-form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdobhBfTCqsLAUp0RNXLmf3eX9jLHsxgoPakn9qek2GI6izYA/formResponse" method="POST" target="hidden_iframe">
-        <input type="text" name="entry.2045553459" placeholder="Your Name" id="name" required>
-        <input type="email" name="entry.2001873758" placeholder="Your Email" id="email" required>
-        <input type="text" name="entry.172257648" placeholder="Your Phone Number" id="phone" required>
-        <textarea name="entry.592809683" placeholder="Your Message" id="message" required></textarea>
-        <button type="submit">Send Message</button>
-        <!-- Custom feedback message -->
-        <!-- <p id="thank-you" style="display: none; color: green;">Thanks for your message! We'll get back to you soon.</p> -->
-        <p id="form-feedback" style="display: none;"></p> <!-- For error/success feedback -->
-      </form>
-      <iframe name="hidden_iframe" style="display: none;"></iframe> <!-- Invisible iframe for submission -->
+      <div class="qr-code">
+        <p>Scan QR code to add contact</p>
+        <img src="QR.png" alt="Scan to get contact details">
+      </div>
     </div>
-  </section>
+	
+    <form id="contact-form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdobhBfTCqsLAUp0RNXLmf3eX9jLHsxgoPakn9qek2GI6izYA/formResponse" method="POST" target="hidden_iframe">
+      <input type="text" name="entry.2045553459" placeholder="Your Name" id="name" required>
+      <input type="email" name="entry.2001873758" placeholder="Your Email" id="email" required>
+      <input type="text" name="entry.172257648" placeholder="Your Phone Number" id="phone" required>
+      <textarea name="entry.592809683" placeholder="Your Message" id="message" required></textarea>
+      <button type="submit">Send Message</button>
+	  <p id="form-feedback" style="display: none;"></p> <!-- For error/success feedback -->
+    </form>
+    <iframe name="hidden_iframe" style="display: none;"></iframe>
+  </div>
+</section>
+
 
   <!-- Footer Section -->
   <footer>

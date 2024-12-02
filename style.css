@@ -122,6 +122,8 @@ nav ul li a {
 .contact {
   background: #f1f1f1;
   padding: 50px 0;
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
 }
 
 .contact form input, .contact form textarea {
@@ -153,28 +155,35 @@ nav ul li a {
 
 /* Styling for contact-info block */
 .contact-info {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: flex; /* Horizontal alignment */
+  flex-direction: row; /* Ensure children are aligned horizontally */
+  align-items: center; /* Vertical centering of items */
+  justify-content: flex-start; /* Even spacing between text and QR code */
   gap: 20px; /* Space between text and QR code */
-  margin-top: 20px;
+  width: 100%; /* Full width */
+  /* max-width: 800px; /* Limit the maximum width */
+  margin: 0 auto; /* Center the block within its parent */
+  margin-top: 20px; /* Add spacing from the heading */
 }
 
-/* Contact Text */
 .contact-text {
-  flex: 1; /* Allow text to take up available space */
+  flex: 2; /* Allocate more space to the text section */
 }
 
-/* QR Code Styling */
+.qr-code {
+  flex: 1; /* Allocate smaller space to QR code */
+  text-align: center; /* Center-align QR code content */
+}
+
 .qr-code img {
-  max-width: 150px; /* Set a maximum size for the QR code */
-  height: auto; /* Maintain aspect ratio */
-  border: 1px solid #ccc; /* Optional: Add a border around the QR code */
-  border-radius: 8px; /* Optional: Rounded corners */
+  max-width: 150px; /* Ensure QR code is appropriately sized */
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
 }
 
-
-
-
-
-
+/* CSS for invalid input field */
+.invalid {
+  border: 1px solid red !important; /* Red border to indicate invalid input */
+  background-color: #fdd; /* Optional: light red background */
+}
