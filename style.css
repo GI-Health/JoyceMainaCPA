@@ -126,7 +126,7 @@ nav ul li a {
 
 .contact form input, .contact form textarea {
   display: block;
-  width: 100%;
+  width: 80%;
   padding: 10px;
   margin: 10px 0;
   border: 1px solid #ccc;
@@ -142,8 +142,33 @@ nav ul li a {
   cursor: pointer;
 }
 
-/* CSS for invalid input field */
-.invalid {
-  border: 2px solid red !important; /* Red border to indicate invalid input */
-  /*background-color: #fdd; /* Optional: light red background */
+/* Ensure the contact section is taking up full width */
+.contact .container {
+  display: flex;
+  flex-direction: column; /* Keep column layout for main section */
+  align-items: center; /* Centers items horizontally */
+  width: 100%; /* Ensure the contact section takes the full width */
+  padding: 0 20px; /* Adds some padding on the left and right */
 }
+
+/* Styling for contact-info block */
+.contact-info {
+  display: flex; /* Enables side-by-side layout */
+  justify-content: flex-start; /* Aligns items to the left */
+  align-items: center; /* Aligns both vertically */
+  gap: 20px; /* Space between contact details and QR code */
+  width: 100%; /* Ensures the width of the container */
+  max-width: 800px; /* Limit max width */
+  margin-top: 20px; /* Adds spacing from previous elements */
+}
+
+/* Styling for the contact details */
+.contact-details {
+  flex: 0 1 60%; /* Flexibly takes 60% of the space, but doesn't grow or shrink */
+}
+
+
+
+
+
+
