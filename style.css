@@ -126,7 +126,7 @@ nav ul li a {
 
 .contact form input, .contact form textarea {
   display: block;
-  width: 80%;
+  width: 100%;
   padding: 10px;
   margin: 10px 0;
   border: 1px solid #ccc;
@@ -153,18 +153,24 @@ nav ul li a {
 
 /* Styling for contact-info block */
 .contact-info {
-  display: flex; /* Enables side-by-side layout */
-  justify-content: flex-start; /* Aligns items to the left */
-  align-items: center; /* Aligns both vertically */
-  gap: 20px; /* Space between contact details and QR code */
-  width: 100%; /* Ensures the width of the container */
-  max-width: 800px; /* Limit max width */
-  margin-top: 20px; /* Adds spacing from previous elements */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px; /* Space between text and QR code */
+  margin-top: 20px;
 }
 
-/* Styling for the contact details */
-.contact-details {
-  flex: 0 1 60%; /* Flexibly takes 60% of the space, but doesn't grow or shrink */
+/* Contact Text */
+.contact-text {
+  flex: 1; /* Allow text to take up available space */
+}
+
+/* QR Code Styling */
+.qr-code img {
+  max-width: 150px; /* Set a maximum size for the QR code */
+  height: auto; /* Maintain aspect ratio */
+  border: 1px solid #ccc; /* Optional: Add a border around the QR code */
+  border-radius: 8px; /* Optional: Rounded corners */
 }
 
 
