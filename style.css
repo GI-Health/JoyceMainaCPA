@@ -1,6 +1,43 @@
 /* Global Styles */
+
+/* Define a color palette */
+:root {
+  --primary-color: #004B99; /* Deep blue */
+  --secondary-color: #000; /* black */
+  --accent-color: #CCE7FF; /* Light sky blue */
+  --text-color: #333; /* Dark grey */
+  --background-color: #f9f9f9; /* Light grey */
+}
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Enhance headings */
+h1, h2, h3 {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 5px 0;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
@@ -14,39 +51,69 @@ body {
   overflow: hidden;
 }
 
+
 /* Header */
 header {
-  background: linear-gradient(45deg, #0066CC, #004B99);
+  position: relative; /* Establish a positioning context for the logo */
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
   color: #fff;
-  text-align: center;
-  padding: 20px 0;
+  padding: 20px 0; /* Adjust to ensure enough space for content */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Centers all content (except the logo) */
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2.5em;
+/* Logo (Floating Layer) */
+.logo {
+  position: absolute; /* Positions the logo relative to the header */
+  top: 40px; /* Adjust vertical placement */
+  left: 20px; /* Adjust horizontal placement */
+  max-width: 100px; /* Control the size of the logo */
+  height: auto; /* Maintain aspect ratio */
+  z-index: 10; /* Ensures it stays above other elements */
 }
 
-header h2 {
-  margin: 10px 0;
-  font-weight: 300;
+/* Header Center Content */
+.header-center {
+  text-align: center; /* Centers the text */
+  margin-top: 20px; /* Space between the logo and text */
+}
+
+
+/* Navigation Menu */
+nav {
+  margin-top: 15px; /* Space between text and navigation */
 }
 
 nav ul {
-  padding: 0;
-  margin: 10px 0 0;
+  display: flex;
+  justify-content: center; /* Center the navigation */
+  gap: 20px; /* Space between nav items */
   list-style: none;
-}
-
-nav ul li {
-  display: inline;
-  margin: 0 10px;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li a {
   color: #fff;
   text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background 0.3s ease;
 }
+
+nav ul li a:hover,
+nav ul li a:focus {
+  background: var(--accent-color);
+  color: var(--primary-color);
+}
+
+
+/* Adjustments for vertical alignment 
+header .container > * {
+  display: flex;
+  align-items: center; /* Ensures vertical alignment of logo and text 
+}*/
+
 
 /* Banner */
 .banner {
@@ -66,16 +133,18 @@ nav ul li a {
 
 .banner .cta {
   display: inline-block;
-  background: #004B99;
+  background: var(--secondary-color);
   color: #fff;
   padding: 10px 20px;
-  margin-top: 20px;
-  text-decoration: none;
+  font-size: 1rem;
   border-radius: 5px;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: background 0.3s ease;
 }
 
 .banner .cta:hover {
-  background: #003366;
+  background: var(--primary-color);
 }
 
 /* Services Section */
@@ -101,21 +170,22 @@ nav ul li a {
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .service-item i {
   font-size: 2em;
-  color: #004B99;
+  color: var(--primary-color);
 }
 
 .service-item h3 {
-  color: #333;
-  margin-top: 10px;
-}
-
-.service-item:hover {
-  transform: translateY(-5px);
+  margin-top: 15px;
+  color: var(--primary-color);
 }
 
 /* Contact Section */
@@ -126,22 +196,38 @@ nav ul li a {
   justify-content: center; /* Center the content horizontally */
 }
 
-.contact form input, .contact form textarea {
+.contact form input,
+.contact form textarea {
   display: block;
   width: 100%;
+  font-size: 1rem;
   padding: 10px;
   margin: 10px 0;
   border: 1px solid #ccc;
   border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+
+.contact form input:focus,
+.contact form textarea:focus {
+  border-color: var(--secondary-color);
+  outline: none;
 }
 
 .contact form button {
-  background: #004B99;
+  background: var(--primary-color);
   color: #fff;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
+  font-size: 1rem;
   cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact form button:hover {
+  background: var(--secondary-color);
 }
 
 /* Ensure the contact section is taking up full width */
@@ -158,12 +244,11 @@ nav ul li a {
   display: flex; /* Horizontal alignment */
   flex-direction: row; /* Ensure children are aligned horizontally */
   align-items: center; /* Vertical centering of items */
-  /*justify-content: flex-start; /* Even spacing between text and QR code */
-  gap: 20px; /* Space between text and QR code */
+  /*justify-content: center; /* Even spacing between text and QR code */
+  gap: 40px; /* Space between text and QR code */
   /*width: 100%; /* Full width */
-  /* max-width: 800px; /* Limit the maximum width */
-  margin: 0 auto; /* Center the block within its parent */
-  margin-top: 20px; /* Add spacing from the heading */
+  max-width: 0px; /* Limit the maximum width */
+  /*margin: 0 auto; /* Center the block within its parent */
 }
 
 .contact-text {
@@ -186,4 +271,16 @@ nav ul li a {
 .invalid {
   border: 2px solid red !important; /* Red border to indicate invalid input */
   background-color: #fdd; /* Optional: light red background */
+}
+
+footer {
+  background: var(--secondary-color);
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
 }

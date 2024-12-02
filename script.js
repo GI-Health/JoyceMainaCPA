@@ -84,6 +84,7 @@ function isValidPhone(phone) {
 // Function to handle form submission without redirect
 function handleFormSubmit() {
   var form = document.getElementById("contact-form");
+  event.preventDefault();
 
   // Create a hidden iframe to submit the form to Google Forms without redirecting
   var iframe = document.createElement("iframe");
@@ -97,12 +98,14 @@ function handleFormSubmit() {
   // Submit the form
   form.submit();
   
-      // Optionally reset form fields after submission
+  // Show a custom success message on the page
+  document.getElementById("form-feedback").style.display = "block"; // Display the custom confirmation message
+  
+        // Optionally reset form fields after submission
   setTimeout(() => {
     form.reset(); // Reset form fields
-    document.getElementById("thank-you").style.display = "block"; // Display success message
-  }, 1500);
-
-  // Show a custom success message on the page
-  document.getElementById("thank-you").style.display = "block"; // Display the custom confirmation message
+    document.getElementById("form-feedback").style.display = "none"; // Display success message
+  }, 2000);
 }
+
+
