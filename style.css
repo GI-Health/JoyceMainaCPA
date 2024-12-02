@@ -148,7 +148,7 @@ nav ul li a {
 .contact .container {
   display: flex;
   flex-direction: column; /* Keep column layout for main section */
-  align-items: center; /* Centers items horizontally */
+  align-items: flex start; /* Centers items horizontally */
   width: 100%; /* Ensure the contact section takes the full width */
   padding: 0 20px; /* Adds some padding on the left and right */
 }
@@ -158,9 +158,9 @@ nav ul li a {
   display: flex; /* Horizontal alignment */
   flex-direction: row; /* Ensure children are aligned horizontally */
   align-items: center; /* Vertical centering of items */
-  justify-content: flex-start; /* Even spacing between text and QR code */
+  /*justify-content: flex-start; /* Even spacing between text and QR code */
   gap: 20px; /* Space between text and QR code */
-  width: 100%; /* Full width */
+  /*width: 100%; /* Full width */
   /* max-width: 800px; /* Limit the maximum width */
   margin: 0 auto; /* Center the block within its parent */
   margin-top: 20px; /* Add spacing from the heading */
@@ -184,6 +184,6 @@ nav ul li a {
 
 /* CSS for invalid input field */
 .invalid {
-  border: 1px solid red !important; /* Red border to indicate invalid input */
+  border: 2px solid red !important; /* Red border to indicate invalid input */
   background-color: #fdd; /* Optional: light red background */
 }
