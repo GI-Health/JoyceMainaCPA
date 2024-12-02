@@ -57,7 +57,7 @@ header {
   position: relative; /* Establish a positioning context for the logo */
   background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
   color: #fff;
-  padding: 20px 0; /* Adjust to ensure enough space for content */
+  padding: 10px 0; /* Adjust to ensure enough space for content */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center; /* Centers all content (except the logo) */
 }
@@ -118,7 +118,7 @@ header .container > * {
 /* Banner */
 .banner {
   background: #CCE7FF;
-  padding: 60px 0;
+  padding: 30px 0;
   text-align: center;
 }
 
