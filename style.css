@@ -67,7 +67,7 @@ header {
   position: absolute; /* Positions the logo relative to the header */
   top: 40px; /* Adjust vertical placement */
   left: 20px; /* Adjust horizontal placement */
-  max-width: 100px; /* Control the size of the logo */
+  max-width: 40px; /* Control the size of the logo */
   height: auto; /* Maintain aspect ratio */
   z-index: 10; /* Ensures it stays above other elements */
 }
